@@ -14,7 +14,10 @@ public class AddTicketPrices
         {
             ticketPrices.add(ticketPrice);
             System.out.println("Ticket added!");
+            return;
         }
+
+        System.out.println("Price must be greater than 0.");
 
     }
 }

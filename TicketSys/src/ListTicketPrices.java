@@ -1,15 +1,17 @@
-import java.util.List;
-
-public class ListTicketPrices
+public class ListTicketPrices extends AddTicketPrices
 {
-    public static void listTicketPrice(List<Double> prices)
+    public static void listTicketPrices()
     {
-        if (prices.isEmpty())
+        if (ticketPrices.isEmpty())
         {
-            System.out.println("No tickets available.");
-        } else {
-            System.out.println("Ticket Prices:");
-            prices.forEach(price -> System.out.println(" - $" + price));
+            System.out.println("No ticket prices available.");
+            return;
+        }
+
+        System.out.println("Ticket Prices:");
+        for (int i = 0; i < ticketPrices.size(); i++)
+        {
+            System.out.printf("[%d] %.2f%n", i, ticketPrices.get(i));
         }
     }
 }
