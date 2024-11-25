@@ -18,18 +18,19 @@ public class TicketSalesManagementSystem
             System.out.println("7. Find Maximum Price");
             System.out.println("8. Find Minimum Price");
             System.out.println("9. Exit");
+            System.out.print("Enter your choice: ");
             choice = scanner.nextInt();
             switch (choice)
             {
-                case 1 -> ;
-                case 2 -> ;
-                case 3 -> ;
-                case 4 -> ;
-                case 5 -> ;
-                case 6 -> ;
-                case 7 -> ;
-                case 8 -> ;
-                case 9 -> ;
+                case 1 -> AddTicketPrices.addTicket(scanner);
+                case 2 -> UpdateTicketPrices.updatePrices(scanner);
+                case 3 -> DeleteTicketPrices.deleteTicket(scanner);
+                case 4 -> ListTicketPrices.listTicketPrices();
+//                case 5 -> ;
+//                case 6 -> ;
+//                case 7 -> ;
+//                case 8 -> ;
+//                case 9 -> ;
                 default -> System.out.println("Invalid choice");
             }
 
