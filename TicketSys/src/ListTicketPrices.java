@@ -13,8 +13,8 @@ public class ListTicketPrices extends AddTicketPrices
         System.out.println("Ticket Prices:");
         for (int i = 0; i < ticketPrices.size(); i++)
         {
-            System.out.printf("[%d] %.2f%n", i, ticketPrices.get(i)); /// print each ticket price with its index
-        }
+            //print each ticket price with its index
+            System.out.printf("[%d] %.2f%n", i, ticketPrices.get(i));
         }
     }
 }
