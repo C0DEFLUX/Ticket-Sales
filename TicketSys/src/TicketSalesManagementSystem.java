@@ -26,10 +26,10 @@ public class TicketSalesManagementSystem
                 case 2 -> UpdateTicketPrices.updatePrices(scanner);
                 case 3 -> DeleteTicketPrices.deleteTicket(scanner);
                 case 4 -> ListTicketPrices.listTicketPrices();
-//                case 5 -> ;
-//                case 6 -> ;
-//                case 7 -> ;
-//                case 8 -> ;
+                case 5 -> CalculateTotalSales.displayTotalSales();
+                case 6 -> CalculateAveragePrice.displayAveragePrice();
+                case 7 -> FindMaximumPrice.displayMaximumPrice();
+                case 8 -> FindMinimumPrice.displayMinimumPrice();
                 case 9 -> System.out.println("Exiting");
                 default -> System.out.println("Invalid choice");
             }
