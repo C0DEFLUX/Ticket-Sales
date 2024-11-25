@@ -1,6 +1,6 @@
 import java.util.List;
 
-public class ListTicketPrice
+public class ListTicketPrices
 {
     public static void listTicketPrice(List<Double> prices)
     {
