@@ -8,7 +8,15 @@ public class FindMaximumPrice extends AddTicketPrices
             return;
         }
 
-        double maxPrice = ticketPrices.stream().max(Double::compare).orElse(0.0);
+        double maxPrice = ticketPrices.get(0);
+        for (double price : ticketPrices)
+        {
+            if (price > maxPrice)
+            {
+                maxPrice = price;
+            }
+        }
+
         System.out.println("Maximum ticket price: $" + maxPrice);
     }
 }

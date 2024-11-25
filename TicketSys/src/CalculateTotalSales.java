@@ -8,7 +8,12 @@ public class CalculateTotalSales extends AddTicketPrices
             return;
         }
 
-        double totalSales = ticketPrices.stream().mapToDouble(Double::doubleValue).sum();
+        double totalSales = 0.0;
+        for (double price : ticketPrices)
+        {
+            totalSales += price;
+        }
+
         System.out.println("Total sales from ticket prices: $" + totalSales);
     }
 }

@@ -8,7 +8,15 @@ public class FindMinimumPrice extends AddTicketPrices
             return;
         }
 
-        double minPrice = ticketPrices.stream().min(Double::compare).orElse(0.0);
+        double minPrice = ticketPrices.get(0);
+        for (double price : ticketPrices)
+        {
+            if (price < minPrice)
+            {
+                minPrice = price;
+            }
+        }
+
         System.out.println("Minimum ticket price: $" + minPrice);
     }
 }

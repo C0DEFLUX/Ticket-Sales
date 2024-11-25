@@ -8,7 +8,13 @@ public class CalculateAveragePrice extends AddTicketPrices
             return;
         }
 
-        double averagePrice = ticketPrices.stream().mapToDouble(Double::doubleValue).average().orElse(0.0);
+        double totalPrice = 0.0;
+        for (double price : ticketPrices)
+        {
+            totalPrice += price;
+        }
+
+        double averagePrice = totalPrice / ticketPrices.size();
         System.out.println("Average ticket price: $" + averagePrice);
     }
 }
